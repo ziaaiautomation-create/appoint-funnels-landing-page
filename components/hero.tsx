@@ -9,7 +9,7 @@ const tickerItems = [
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-40 pb-0">
+    <section id="home" className="relative overflow-hidden pt-32 pb-0 sm:pt-40">
       {/* Radial glow backdrop */}
       <div
         aria-hidden="true"
@@ -20,26 +20,54 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-4xl px-4 text-center">
-        <h1 className="font-display text-balance text-4xl font-bold leading-tight text-foreground sm:text-6xl lg:text-7xl">
-          Top B2B AI Lead Gen{' '}
-          <span className="inline-block rounded-xl bg-brand px-3 py-1 text-white">
-            Systems
-          </span>{' '}
-          in Demand
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
+        <h1 className="font-display text-[clamp(1rem,6.2vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <span className="block whitespace-nowrap">
+            The AI Sales Systems That
+          </span>
+          <span className="block whitespace-nowrap">
+            Fills Your Calendar With
+          </span>
+          <span className="block whitespace-nowrap text-brand">
+            Booked Appointments
+          </span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-card-foreground sm:text-lg">
-          High-velocity client acquisition engines tailored for modern
-          businesses ready to dominate their market with hyper-automated
-          infrastructure.
+        <p className="mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base">
+          AI systems that generate leads, book appointments, and scale your
+          pipeline. Built for B2B companies ready to dominate their market.
         </p>
-        <div className="mt-10 flex justify-center">
+
+        <dl className="mt-12 flex w-full max-w-lg flex-wrap justify-center gap-x-2 gap-y-9">
+          {[
+            { value: '30+', label: 'satisfied clients' },
+            { value: '10K+', label: 'appointments booked' },
+            { value: '95%+', label: 'inbox placement' },
+            { value: '24/7', label: 'AI working for you' },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="flex w-[30%] min-w-24 flex-col items-center gap-1"
+            >
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="font-display text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
+                {stat.value}
+              </dd>
+              <span className="text-xs text-muted-foreground sm:text-sm">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </dl>
+
+        <div className="mt-12 flex justify-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Get in Touch
-            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            {"Let's talk"}
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </span>
           </a>
         </div>
       </div>
