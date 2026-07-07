@@ -21,7 +21,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
-        <h1 className="font-display text-[clamp(1.375rem,8.4vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        <h1 className="font-display text-[clamp(1rem,6.2vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           <span className="block whitespace-nowrap">
             The AI Sales Systems That
           </span>
