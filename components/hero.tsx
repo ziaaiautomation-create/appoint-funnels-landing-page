@@ -21,9 +21,16 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
-        <h1 className="font-display text-balance text-4xl font-medium leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-          The AI Sales Systems That Fills Your Calendar With{' '}
-          <span className="text-brand">Booked Appointments</span>
+        <h1 className="font-display text-[clamp(1.25rem,8vw,1.75rem)] font-medium leading-[1.2] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <span className="block whitespace-nowrap">
+            The AI Sales Systems That
+          </span>
+          <span className="block whitespace-nowrap">
+            Fills Your Calendar With
+          </span>
+          <span className="block whitespace-nowrap text-brand">
+            Booked Appointments
+          </span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-pretty text-sm leading-relaxed text-card-foreground sm:text-base">
           AI systems that generate leads, book appointments, and scale your
