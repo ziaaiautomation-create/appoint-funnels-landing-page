@@ -20,8 +20,8 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
-        <h1 className="font-display text-[clamp(1.25rem,8vw,1.75rem)] font-medium leading-[1.2] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
+        <h1 className="font-display text-[clamp(1.375rem,8.4vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           <span className="block whitespace-nowrap">
             The AI Sales Systems That
           </span>
@@ -32,37 +32,40 @@ export function Hero() {
             Booked Appointments
           </span>
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-pretty text-sm leading-relaxed text-card-foreground sm:text-base">
+        <p className="mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base">
           AI systems that generate leads, book appointments, and scale your
           pipeline. Built for B2B companies ready to dominate their market.
         </p>
 
-        <dl className="mt-10 grid w-full max-w-sm grid-cols-2 gap-x-6 gap-y-8 sm:max-w-md">
+        <dl className="mt-12 flex w-full max-w-lg flex-wrap justify-center gap-x-2 gap-y-9">
           {[
             { value: '30+', label: 'satisfied clients' },
             { value: '10K+', label: 'appointments booked' },
             { value: '95%+', label: 'inbox placement' },
             { value: '24/7', label: 'AI working for you' },
           ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1">
+            <div
+              key={stat.label}
+              className="flex w-[30%] min-w-24 flex-col items-center gap-1"
+            >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-3xl font-medium text-foreground sm:text-4xl">
+              <dd className="font-display text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
                 {stat.value}
               </dd>
-              <span className="border-b border-border pb-2 text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {stat.label}
               </span>
             </div>
           ))}
         </dl>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-primary py-3 pl-7 pr-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             {"Let's talk"}
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </span>
           </a>
