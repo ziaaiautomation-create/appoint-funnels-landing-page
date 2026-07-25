@@ -82,3 +82,78 @@
 .animate-ticker {
   animation: ticker-scroll 30s linear infinite;
 }
+
+/* ---- Hero entrance animations ---- */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes highlight-sweep {
+  from {
+    transform: skewX(-6deg) scaleX(0);
+  }
+  to {
+    transform: skewX(-6deg) scaleX(1);
+  }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2%) scale(1.05);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-highlight {
+  transform-origin: left center;
+  animation: highlight-sweep 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.animate-glow {
+  animation: glow-breathe 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker,
+  .animate-fade-up,
+  .animate-highlight,
+  .animate-glow {
+    animation: none;
+  }
+  .animate-highlight {
+    transform: skewX(-6deg);
+  }
+}
+
+/* ---- Hero backdrop: vertical columns ---- */
+.hero-columns {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.032) 0px,
+    rgba(255, 255, 255, 0.032) 1px,
+    transparent 1px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.018) 3px,
+    rgba(255, 255, 255, 0.018) 62px,
+    transparent 62px,
+    transparent 66px
+  );
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
