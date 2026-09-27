@@ -31,12 +31,10 @@ export function CaseStudies() {
       </div>
 
       <div className="flex flex-col gap-8">
-        {cases.map((item, idx) => (
+        {cases.map((item) => (
           <article
             key={item.title}
-            className={`grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-secondary p-8 sm:p-12 lg:grid-cols-2 ${
-              idx % 2 === 1 ? 'lg:ml-16' : 'lg:mr-16'
-            }`}
+            className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-secondary p-8 sm:p-12 lg:grid-cols-2"
           >
             <div>
               <h3 className="font-display text-2xl font-bold text-foreground sm:text-3xl">

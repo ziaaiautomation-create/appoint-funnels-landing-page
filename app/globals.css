@@ -97,10 +97,10 @@
 
 @keyframes highlight-sweep {
   from {
-    transform: skewX(-6deg) scaleX(0);
+    transform: scaleX(0);
   }
   to {
-    transform: skewX(-6deg) scaleX(1);
+    transform: scaleX(1);
   }
 }
 
@@ -137,7 +137,7 @@
     animation: none;
   }
   .animate-highlight {
-    transform: skewX(-6deg);
+    transform: none;
   }
 }
 
