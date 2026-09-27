@@ -10,6 +10,12 @@ const tickerItems = [
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden pt-32 pb-0 sm:pt-40">
+      {/* Faint vertical columns */}
+      <div
+        aria-hidden="true"
+        className="hero-columns pointer-events-none absolute inset-x-0 top-0 h-[520px]"
+      />
+
       {/* Radial glow backdrop */}
       <div
         aria-hidden="true"
@@ -20,21 +26,53 @@ export function Hero() {
         }}
       />
 
+      {/* Glow rising from the bottom of the hero */}
+      <div
+        aria-hidden="true"
+        className="animate-glow pointer-events-none absolute inset-x-0 bottom-0 h-[420px] origin-bottom"
+        style={{
+          background:
+            'radial-gradient(ellipse 75% 100% at 50% 118%, rgba(44,132,195,0.5), rgba(27,58,107,0.28) 45%, transparent 72%)',
+        }}
+      />
+
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
         <h1 className="font-display text-[clamp(1rem,6.2vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-          <span className="block whitespace-nowrap">
+          <span
+            className="animate-fade-up block whitespace-nowrap"
+            style={{ animationDelay: '0.05s' }}
+          >
             The AI Sales Systems That
           </span>
-          <span className="block whitespace-nowrap">
+          <span
+            className="animate-fade-up block whitespace-nowrap"
+            style={{ animationDelay: '0.18s' }}
+          >
             Fills Your Calendar With
           </span>
-          <span className="block whitespace-nowrap text-brand">
-            Booked Appointments
+          <span
+            className="animate-fade-up mt-1 block whitespace-nowrap"
+            style={{ animationDelay: '0.31s' }}
+          >
+            <span className="relative inline-block px-3 py-0.5">
+              <span
+                aria-hidden="true"
+                className="animate-highlight absolute inset-0 bg-brand"
+              />
+              <span className="relative text-background">
+                Booked Appointments
+              </span>
+            </span>
           </span>
         </h1>
-        <p className="mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base">
+        <p
+          className="animate-fade-up mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base"
+          style={{ animationDelay: '0.5s' }}
+        >
           AI systems that generate leads, book appointments, and scale your
-          pipeline. Built for B2B companies ready to dominate their market.
+          pipeline. Built for{' '}
+          <strong className="font-semibold text-foreground">B2B</strong>{' '}
+          companies ready to dominate their market.
         </p>
 
         <dl className="mt-12 flex w-full max-w-lg flex-wrap justify-center gap-x-2 gap-y-9">
@@ -43,10 +81,11 @@ export function Hero() {
             { value: '10K+', label: 'appointments booked' },
             { value: '95%+', label: 'inbox placement' },
             { value: '24/7', label: 'AI working for you' },
-          ].map((stat) => (
+          ].map((stat, i) => (
             <div
               key={stat.label}
-              className="flex w-[30%] min-w-24 flex-col items-center gap-1"
+              className="animate-fade-up flex w-[30%] min-w-24 flex-col items-center gap-1"
+              style={{ animationDelay: `${0.62 + i * 0.1}s` }}
             >
               <dt className="sr-only">{stat.label}</dt>
               <dd className="font-display text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
@@ -59,10 +98,13 @@ export function Hero() {
           ))}
         </dl>
 
-        <div className="mt-12 flex justify-center">
+        <div
+          className="animate-fade-up mt-12 flex justify-center"
+          style={{ animationDelay: '1.05s' }}
+        >
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground shadow-[0_8px_40px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_50px_-6px_rgba(37,99,235,0.9)]"
           >
             {"Let's talk"}
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
