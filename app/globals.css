@@ -132,6 +132,34 @@
   animation: glow-breathe 9s ease-in-out infinite;
 }
 
+/* ---- Scroll reveal (toggles both directions) ---- */
+.reveal {
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    filter 0.7s ease var(--reveal-delay, 0ms),
+    translate 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.reveal-text:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(6px);
+}
+
+.reveal-card:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(64px) scale(0.92) rotate(var(--reveal-tilt, -2deg));
+}
+
+.reveal-card.is-visible {
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-ticker,
   .animate-fade-up,

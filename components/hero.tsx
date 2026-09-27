@@ -65,7 +65,7 @@ export function Hero() {
           </span>
         </h1>
         <p
-          className="animate-fade-up mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.9375rem,4.9vw,1.125rem)] leading-relaxed text-muted-foreground sm:text-base"
+          className="animate-fade-up mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base"
           style={{ animationDelay: '0.5s' }}
         >
           AI systems that generate leads, book appointments, and scale your
@@ -87,10 +87,10 @@ export function Hero() {
               style={{ animationDelay: `${0.62 + i * 0.1}s` }}
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-heading text-[clamp(1.75rem,9vw,2.25rem)] font-medium text-foreground sm:text-4xl">
+              <dd className="font-heading text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
                 {stat.value}
               </dd>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {stat.label}
               </span>
             </div>
