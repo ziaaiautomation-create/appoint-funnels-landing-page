@@ -57,7 +57,7 @@ export function Hero() {
             <span className="relative inline-block px-3 py-0.5">
               <span
                 aria-hidden="true"
-                className="animate-highlight absolute inset-0 bg-brand"
+                className="animate-highlight absolute inset-0 rounded-md bg-brand"
               />
               <span className="relative text-background">
                 Booked Appointments
