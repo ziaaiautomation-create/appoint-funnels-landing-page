@@ -37,7 +37,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
-        <h1 className="font-heading text-[clamp(1.25rem,7.6vw,2.5rem)] font-medium leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        <h1 className="font-heading text-[clamp(1.25rem,8.7vw,2.75rem)] font-medium leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           {[
             'AI sales systems that',
             'fill your calendar with',
@@ -65,7 +65,7 @@ export function Hero() {
           </span>
         </h1>
         <p
-          className="animate-fade-up mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.875rem,4.4vw,1.0625rem)] leading-relaxed text-muted-foreground sm:text-base"
+          className="animate-fade-up mx-auto mt-6 max-w-xl text-pretty text-[clamp(0.9375rem,4.9vw,1.125rem)] leading-relaxed text-muted-foreground sm:text-base"
           style={{ animationDelay: '0.5s' }}
         >
           AI systems that generate leads, book appointments, and scale your
@@ -77,7 +77,7 @@ export function Hero() {
         <dl className="mt-10 grid w-full max-w-xs grid-cols-2 gap-x-4 gap-y-8 sm:max-w-2xl sm:grid-cols-4">
           {[
             { value: '30+', label: 'satisfied clients' },
-            { value: '10K+', label: 'appointments booked' },
+            { value: '200K+', label: 'outbound outreaches' },
             { value: '95%+', label: 'inbox placement' },
             { value: '24/7', label: 'AI working for you' },
           ].map((stat, i) => (
@@ -87,10 +87,10 @@ export function Hero() {
               style={{ animationDelay: `${0.62 + i * 0.1}s` }}
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-heading text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
+              <dd className="font-heading text-[clamp(1.75rem,9vw,2.25rem)] font-medium text-foreground sm:text-4xl">
                 {stat.value}
               </dd>
-              <span className="text-xs text-muted-foreground sm:text-sm">
+              <span className="text-sm text-muted-foreground">
                 {stat.label}
               </span>
             </div>
