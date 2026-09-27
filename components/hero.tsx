@@ -37,31 +37,30 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
-        <h1 className="font-display text-[clamp(1rem,6.2vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        <h1 className="font-display text-[clamp(1.5rem,7.8vw,2.25rem)] font-medium leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          {[
+            'The AI Sales Systems',
+            'That Fills Your',
+            'Calendar With Booked',
+          ].map((line, i) => (
+            <span
+              key={line}
+              className="animate-fade-up block whitespace-nowrap"
+              style={{ animationDelay: `${0.05 + i * 0.12}s` }}
+            >
+              {line}
+            </span>
+          ))}
           <span
             className="animate-fade-up block whitespace-nowrap"
-            style={{ animationDelay: '0.05s' }}
+            style={{ animationDelay: '0.41s' }}
           >
-            The AI Sales Systems That
-          </span>
-          <span
-            className="animate-fade-up block whitespace-nowrap"
-            style={{ animationDelay: '0.18s' }}
-          >
-            Fills Your Calendar With
-          </span>
-          <span
-            className="animate-fade-up mt-1 block whitespace-nowrap"
-            style={{ animationDelay: '0.31s' }}
-          >
-            <span className="relative inline-block px-3 py-0.5">
+            <span className="relative -mt-[0.08em] inline-block px-[0.18em]">
               <span
                 aria-hidden="true"
-                className="animate-highlight absolute inset-0 rounded-md bg-brand"
+                className="animate-highlight absolute inset-x-0 top-[0.02em] bottom-[-0.04em] bg-brand"
               />
-              <span className="relative text-background">
-                Booked Appointments
-              </span>
+              <span className="relative text-background">Appointments</span>
             </span>
           </span>
         </h1>
