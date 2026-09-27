@@ -25,7 +25,7 @@ export function CaseStudies() {
         <span className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand">
           Core Outcomes
         </span>
-        <h2 className="font-display mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
+        <h2 className="font-heading mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
           What We Build
         </h2>
       </div>
@@ -37,7 +37,7 @@ export function CaseStudies() {
             className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-secondary p-8 sm:p-12 lg:grid-cols-2"
           >
             <div>
-              <h3 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
+              <h3 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
                 {item.title}
               </h3>
               <p className="mt-4 leading-relaxed text-card-foreground">

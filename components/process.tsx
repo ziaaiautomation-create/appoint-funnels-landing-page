@@ -53,7 +53,7 @@ export function Process() {
         <span className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand">
           The System Process
         </span>
-        <h2 className="font-display mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
+        <h2 className="font-heading mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
           From a cold list to a closed deal
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-card-foreground">
@@ -73,13 +73,13 @@ export function Process() {
               </div>
               <span
                 aria-hidden="true"
-                className="font-display text-5xl font-bold text-secondary transition-colors group-hover:text-brand/30"
+                className="font-heading text-5xl font-bold text-secondary transition-colors group-hover:text-brand/30"
               >
                 {String(i + 1).padStart(2, '0')}
               </span>
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="font-display text-xl font-bold text-foreground">
+              <h3 className="font-heading text-xl font-bold text-foreground">
                 <span className="sr-only">{`Step ${i + 1}: `}</span>
                 {step.title}
               </h3>

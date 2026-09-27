@@ -4,9 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@utility font-heading {
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
+}
+
 @theme inline {
   --font-sans: var(--font-inter), 'Inter', sans-serif;
-  --font-display: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -97,10 +100,10 @@
 
 @keyframes highlight-sweep {
   from {
-    transform: scaleX(0);
+  transform: rotate(-2deg) scaleX(0);
   }
   to {
-    transform: scaleX(1);
+  transform: rotate(-2deg) scaleX(1);
   }
 }
 
@@ -137,7 +140,7 @@
     animation: none;
   }
   .animate-highlight {
-    transform: none;
+  transform: rotate(-2deg);
   }
 }
 

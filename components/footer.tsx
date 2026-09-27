@@ -12,7 +12,7 @@ export function Footer() {
             height={89}
             className="h-6 w-auto"
           />
-          <span className="font-display font-bold text-foreground">
+          <span className="font-heading font-bold text-foreground">
             Appoint Funnels
           </span>
         </div>

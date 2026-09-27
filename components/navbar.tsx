@@ -29,7 +29,7 @@ export function Navbar() {
             priority
             className="h-7 w-auto"
           />
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+          <span className="font-heading text-lg font-bold tracking-tight text-foreground">
             Appoint Funnels
           </span>
         </a>

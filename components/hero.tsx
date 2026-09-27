@@ -37,31 +37,30 @@ export function Hero() {
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center px-4 text-center sm:px-6">
-        <h1 className="font-display text-[clamp(1rem,6.2vw,2rem)] font-medium leading-[1.25] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        <h1 className="font-heading text-[clamp(1.25rem,7.6vw,2.5rem)] font-medium leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          {[
+            'AI sales systems that',
+            'fill your calendar with',
+            'booked, qualified',
+          ].map((line, i) => (
+            <span
+              key={line}
+              className="animate-fade-up block whitespace-nowrap"
+              style={{ animationDelay: `${0.05 + i * 0.12}s` }}
+            >
+              {line}
+            </span>
+          ))}
           <span
             className="animate-fade-up block whitespace-nowrap"
-            style={{ animationDelay: '0.05s' }}
+            style={{ animationDelay: '0.41s' }}
           >
-            The AI Sales Systems That
-          </span>
-          <span
-            className="animate-fade-up block whitespace-nowrap"
-            style={{ animationDelay: '0.18s' }}
-          >
-            Fills Your Calendar With
-          </span>
-          <span
-            className="animate-fade-up mt-1 block whitespace-nowrap"
-            style={{ animationDelay: '0.31s' }}
-          >
-            <span className="relative inline-block px-3 py-0.5">
+            <span className="relative mt-[0.08em] inline-block px-[0.14em]">
               <span
                 aria-hidden="true"
-                className="animate-highlight absolute inset-0 rounded-md bg-brand"
+                className="animate-highlight absolute inset-x-0 top-[0.06em] bottom-[-0.02em] bg-brand"
               />
-              <span className="relative text-background">
-                Booked Appointments
-              </span>
+              <span className="relative text-background">appointments.</span>
             </span>
           </span>
         </h1>
@@ -75,7 +74,7 @@ export function Hero() {
           companies ready to dominate their market.
         </p>
 
-        <dl className="mt-12 flex w-full max-w-lg flex-wrap justify-center gap-x-2 gap-y-9">
+        <dl className="mt-10 grid w-full max-w-xs grid-cols-2 gap-x-4 gap-y-8 sm:max-w-2xl sm:grid-cols-4">
           {[
             { value: '30+', label: 'satisfied clients' },
             { value: '10K+', label: 'appointments booked' },
@@ -84,11 +83,11 @@ export function Hero() {
           ].map((stat, i) => (
             <div
               key={stat.label}
-              className="animate-fade-up flex w-[30%] min-w-24 flex-col items-center gap-1"
+              className="animate-fade-up flex flex-col items-center gap-1"
               style={{ animationDelay: `${0.62 + i * 0.1}s` }}
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
+              <dd className="font-heading text-[clamp(1.5rem,7.7vw,1.875rem)] font-medium text-foreground sm:text-4xl">
                 {stat.value}
               </dd>
               <span className="text-xs text-muted-foreground sm:text-sm">
@@ -123,7 +122,7 @@ export function Hero() {
                 tickerItems.map((item, i) => (
                   <span
                     key={`${dup}-${rep}-${i}`}
-                    className="flex items-center gap-8 font-display text-3xl font-bold uppercase tracking-wider text-muted-foreground/40 sm:text-5xl"
+                    className="flex items-center gap-8 font-heading text-3xl font-bold uppercase tracking-wider text-muted-foreground/40 sm:text-5xl"
                   >
                     {item}
                     <span className="text-brand">•</span>

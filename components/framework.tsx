@@ -46,7 +46,7 @@ export function Framework() {
           ))}
         </div>
 
-        <h2 className="font-display text-balance text-center text-4xl font-bold text-foreground sm:text-5xl">
+        <h2 className="font-heading text-balance text-center text-4xl font-bold text-foreground sm:text-5xl">
           Our <span className="text-brand">3-STEP</span> Growth Framework
         </h2>
 
@@ -64,7 +64,7 @@ export function Framework() {
                   {item.step}
                 </span>
               </div>
-              <h3 className="font-display mt-6 text-xl font-bold text-foreground">
+              <h3 className="font-heading mt-6 text-xl font-bold text-foreground">
                 {item.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-card-foreground">

@@ -7,7 +7,7 @@ export function Testimonials() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
-        <span className="font-display select-none whitespace-nowrap text-[18vw] font-bold uppercase tracking-tighter text-foreground/[0.04]">
+        <span className="font-heading select-none whitespace-nowrap text-[18vw] font-bold uppercase tracking-tighter text-foreground/[0.04]">
           Testimonials
         </span>
       </div>
