@@ -1,14 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, ChevronsRight, Menu, X } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 const links = [
   { label: 'Home', href: '#home' },
   { label: 'Systems', href: '#systems' },
-  { label: 'Core Architecture', href: '#architecture' },
+  { label: 'Process', href: '#process' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'Results', href: '#results' },
-  { label: 'Meet the Founder', href: '#founder' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -19,8 +20,15 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-border bg-background/60 px-5 py-3 backdrop-blur-xl">
-        <a href="#home" className="flex items-center gap-2">
-          <ChevronsRight className="h-6 w-6 text-brand" aria-hidden="true" />
+        <a href="#home" className="flex items-center gap-2.5">
+          <Image
+            src="/images/logo-mark.png"
+            alt=""
+            width={240}
+            height={89}
+            priority
+            className="h-7 w-auto"
+          />
           <span className="font-display text-lg font-bold tracking-tight text-foreground">
             Appoint Funnels
           </span>
