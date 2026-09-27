@@ -13,7 +13,7 @@ export function Contact() {
     <section id="contact" className="mx-auto max-w-6xl px-4 py-24 sm:py-32">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-6xl font-bold leading-none text-foreground sm:text-8xl">
+          <h2 className="font-heading text-6xl font-bold leading-none text-foreground sm:text-8xl">
             {"Let's"}
             <br />
             <span className="text-brand drop-shadow-[0_0_30px_rgba(44,132,195,0.6)]">
@@ -31,7 +31,7 @@ export function Contact() {
           {submitted ? (
             <div className="flex flex-col items-center gap-4 py-12 text-center">
               <CheckCircle2 className="h-12 w-12 text-brand" aria-hidden="true" />
-              <h3 className="font-display text-2xl font-bold text-foreground">
+              <h3 className="font-heading text-2xl font-bold text-foreground">
                 Message Sent
               </h3>
               <p className="text-sm leading-relaxed text-card-foreground">

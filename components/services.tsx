@@ -29,7 +29,7 @@ export function Services() {
           <span className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand">
             Systems
           </span>
-          <h2 className="font-display mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
+          <h2 className="font-heading mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
             What we are offering
           </h2>
         </div>
@@ -51,7 +51,7 @@ export function Services() {
             <div className="inline-flex rounded-2xl border border-brand/30 bg-brand/10 p-4">
               <service.icon className="h-7 w-7 text-brand" aria-hidden="true" />
             </div>
-            <h3 className="font-display mt-6 text-xl font-bold text-foreground">
+            <h3 className="font-heading mt-6 text-xl font-bold text-foreground">
               {service.title}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-card-foreground">

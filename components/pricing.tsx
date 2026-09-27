@@ -47,7 +47,7 @@ export function Pricing() {
         <span className="inline-block rounded-full border border-brand/40 bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand">
           Pricing
         </span>
-        <h2 className="font-display mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
+        <h2 className="font-heading mt-5 text-balance text-4xl font-bold text-foreground sm:text-5xl">
           You pay when it works
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-card-foreground">
@@ -67,7 +67,7 @@ export function Pricing() {
             }`}
           >
             <div className="flex items-center justify-between">
-              <h3 className="font-display text-lg font-bold text-foreground">
+              <h3 className="font-heading text-lg font-bold text-foreground">
                 {plan.title}
               </h3>
               <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
@@ -75,7 +75,7 @@ export function Pricing() {
               </span>
             </div>
             <p className="flex items-baseline gap-2">
-              <span className="font-display text-5xl font-bold text-foreground">
+              <span className="font-heading text-5xl font-bold text-foreground">
                 {plan.price}
               </span>
               <span className="text-sm text-muted-foreground">{plan.unit}</span>
@@ -100,10 +100,10 @@ export function Pricing() {
 
       <article className="mt-5 grid gap-8 rounded-3xl border border-border bg-card p-7 sm:p-10 lg:grid-cols-[auto_1fr_1fr] lg:items-center lg:gap-12">
         <div className="flex flex-col gap-1">
-          <h3 className="font-display text-lg font-bold text-foreground">
+          <h3 className="font-heading text-lg font-bold text-foreground">
             Performance Commission
           </h3>
-          <p className="font-display text-6xl font-bold text-brand">15%</p>
+          <p className="font-heading text-6xl font-bold text-brand">15%</p>
           <p className="text-sm text-muted-foreground">of original deal value</p>
         </div>
 
