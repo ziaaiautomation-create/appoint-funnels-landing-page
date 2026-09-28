@@ -8,6 +8,7 @@ import { Pricing } from '@/components/pricing'
 import { Testimonials } from '@/components/testimonials'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
         <Contact />
       </main>
       <Footer />
+      <ScrollReveal />
     </>
   )
 }
