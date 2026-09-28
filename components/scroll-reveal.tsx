@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 const TEXT_TARGETS = 'main section:not(#home) :is(h2, h2 + p, blockquote, form)'
 const CARD_TARGETS =
-  'main section:not(#home) :is(article, ol > li), footer > div'
+  'main section:not(#home) :is(article, figure, ol > li, ul > li, [class*="rounded-3xl"]), footer > div'
 
 export function ScrollReveal() {
   useEffect(() => {
@@ -26,7 +26,7 @@ export function ScrollReveal() {
       )
       const index = Math.max(0, siblings.indexOf(el))
       el.classList.add('reveal', isCard ? 'reveal-card' : 'reveal-text')
-      el.style.setProperty('--reveal-delay', `${Math.min(index, 5) * 110}ms`)
+      el.style.setProperty('--reveal-delay', `${Math.min(index, 5) * 180}ms`)
       el.style.setProperty('--reveal-tilt', index % 2 === 0 ? '-2deg' : '2deg')
     })
 

@@ -1,0 +1,118 @@
+import { MessageSquareText, Sparkles, Star, ChevronDown } from 'lucide-react'
+
+function SkeletonLine({ className = '' }: { className?: string }) {
+  return <span className={`mock-shimmer block h-2 rounded-full bg-mock-line ${className}`} />
+}
+
+function Stage({ children, label }: { children: React.ReactNode; label: string }) {
+  return (
+    <div
+      role="img"
+      aria-label={label}
+      className="relative flex h-80 items-start justify-center overflow-hidden rounded-2xl bg-mock-surface px-4 pt-8 sm:h-96"
+    >
+      {children}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-mock-surface to-transparent"
+      />
+    </div>
+  )
+}
+
+function Popover({
+  icon,
+  title,
+  points,
+}: {
+  icon: React.ReactNode
+  title: string
+  points: string[]
+}) {
+  return (
+    <div className="mock-float absolute inset-x-0 top-24 mx-auto w-[88%] max-w-sm rounded-xl border border-mock-line bg-mock-panel p-4 shadow-[0_18px_40px_-12px_rgba(28,25,23,0.28)] sm:top-28">
+      <div className="flex items-center justify-between">
+        <span className="flex items-center gap-2 text-sm font-semibold text-mock-ink">
+          {icon}
+          {title}
+        </span>
+        <ChevronDown className="h-4 w-4 text-mock-ink" aria-hidden="true" />
+      </div>
+      <ul className="mt-3 flex flex-col gap-2.5 pl-4">
+        {points.map((point) => (
+          <li key={point} className="list-disc text-xs leading-relaxed text-mock-ink/80">
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function ThreadRow({ name, time }: { name: string; time: string }) {
+  return (
+    <div className="flex items-start gap-3">
+      <span className="h-7 w-7 shrink-0 rounded-full bg-mock-muted/60" />
+      <div className="flex flex-1 flex-col gap-1.5">
+        <span className="text-xs font-medium text-mock-ink">
+          {name} <span className="ml-1 text-[10px] font-normal text-mock-muted">{time}</span>
+        </span>
+        <SkeletonLine className="w-4/5" />
+      </div>
+    </div>
+  )
+}
+
+export function EmailMockup() {
+  return (
+    <Stage label="Unified inbox with an AI overview summarising a positive reply from a prospect">
+      <div className="mock-drift w-[70%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-semibold text-mock-ink">Re: Quick question, Sarah</span>
+          <Star className="h-3.5 w-3.5 text-mock-muted" aria-hidden="true" />
+        </div>
+        <div className="mt-28 flex flex-col gap-5 sm:mt-32">
+          <ThreadRow name="Sarah K." time="10:16 AM" />
+          <span className="text-[10px] text-mock-muted">3 replies</span>
+          <ThreadRow name="Appoint AI" time="10:18 AM" />
+          <SkeletonLine className="w-3/5" />
+        </div>
+      </div>
+      <Popover
+        icon={<Sparkles className="h-4 w-4" aria-hidden="true" />}
+        title="AI Overview"
+        points={[
+          'Sarah replied positively and asked for pricing on the 90-day pilot.',
+          'Meeting booked for Thursday at 2 PM. Calendar invite sent.',
+        ]}
+      />
+    </Stage>
+  )
+}
+
+export function SmsMockup() {
+  return (
+    <Stage label="SMS conversation thread with an AI summary showing a qualified lead and booked call">
+      <div className="mock-drift w-[70%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-semibold text-mock-ink">Mike R. · Roofing Co.</span>
+          <span className="text-[10px] text-mock-muted">SMS</span>
+        </div>
+        <div className="mt-28 flex flex-col gap-3 sm:mt-32">
+          <span className="mock-shimmer h-6 w-3/5 rounded-2xl rounded-bl-sm bg-mock-line" />
+          <span className="mock-shimmer ml-auto h-6 w-2/3 rounded-2xl rounded-br-sm bg-mock-ink/80" />
+          <span className="mock-shimmer h-6 w-1/2 rounded-2xl rounded-bl-sm bg-mock-line" />
+          <span className="mock-shimmer ml-auto h-6 w-2/5 rounded-2xl rounded-br-sm bg-mock-ink/80" />
+        </div>
+      </div>
+      <Popover
+        icon={<MessageSquareText className="h-4 w-4" aria-hidden="true" />}
+        title="Lead Qualified"
+        points={[
+          'Mike runs 3 crews and wants 10+ more jobs per month.',
+          'Agreed to a 15-min call tomorrow at 11 AM. Booked automatically.',
+        ]}
+      />
+    </Stage>
+  )
+}
