@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
+import { ArrowUpRight, CheckCircle2, Mail, Phone } from 'lucide-react'
 
 const inputClasses =
   'w-full rounded-xl border border-input bg-secondary px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground transition-shadow focus:outline-none focus:ring-2 focus:ring-brand focus:shadow-[0_0_20px_rgba(44,132,195,0.25)]'
@@ -25,6 +25,35 @@ export function Contact() {
             system architecture to hit them. No pressure, no fluff — just a
             clear plan.
           </p>
+
+          <a
+            href="https://cal.com/appointfunnels/discoverycall"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-8 inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            Book a call
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground transition-transform group-hover:rotate-45">
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </span>
+          </a>
+
+          <div className="mt-8 flex flex-col gap-3 text-sm text-card-foreground">
+            <a
+              href="tel:+3303120032"
+              className="flex items-center gap-2.5 transition-colors hover:text-foreground"
+            >
+              <Phone className="h-4 w-4 text-brand" aria-hidden="true" />
+              +330 312 0032
+            </a>
+            <a
+              href="mailto:appointfunnels@gmail.com"
+              className="flex items-center gap-2.5 transition-colors hover:text-foreground"
+            >
+              <Mail className="h-4 w-4 text-brand" aria-hidden="true" />
+              appointfunnels@gmail.com
+            </a>
+          </div>
         </div>
 
         <div className="rounded-3xl border border-border bg-card p-8 sm:p-10">
