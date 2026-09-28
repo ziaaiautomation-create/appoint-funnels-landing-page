@@ -141,7 +141,9 @@ export function Pricing() {
 
       <div className="mt-10 flex justify-center">
         <a
-          href="#contact"
+          href="https://cal.com/appointfunnels/discoverycall"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         >
           Start your free trial

@@ -56,7 +56,9 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#contact"
+            href="https://cal.com/appointfunnels/discoverycall"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-1 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-primary-foreground transition-opacity hover:opacity-90 sm:inline-flex"
           >
             Book Intro Call

@@ -102,7 +102,9 @@ export function Hero() {
           style={{ animationDelay: '1.05s' }}
         >
           <a
-            href="#contact"
+            href="https://cal.com/appointfunnels/discoverycall"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 rounded-full bg-primary py-3.5 pl-8 pr-3 text-base font-semibold text-primary-foreground shadow-[0_8px_40px_-8px_rgba(37,99,235,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_50px_-6px_rgba(37,99,235,0.9)]"
           >
             {"Let's talk"}
