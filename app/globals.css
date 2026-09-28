@@ -30,6 +30,11 @@
   --color-background: var(--background);
   --color-brand: var(--brand);
   --color-brand-deep: var(--brand-deep);
+  --color-mock-surface: var(--mock-surface);
+  --color-mock-panel: var(--mock-panel);
+  --color-mock-ink: var(--mock-ink);
+  --color-mock-line: var(--mock-line);
+  --color-mock-muted: var(--mock-muted);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -61,6 +66,11 @@
   --ring: #2c84c3;
   --brand: #2c84c3;
   --brand-deep: #1b3a6b;
+  --mock-surface: #f4f2f1;
+  --mock-panel: #ffffff;
+  --mock-ink: #1c1917;
+  --mock-line: #e7e3e1;
+  --mock-muted: #a8a29e;
   --radius: 0.75rem;
 }
 
@@ -135,9 +145,9 @@
 /* ---- Scroll reveal (toggles both directions) ---- */
 .reveal {
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
-    filter 0.7s ease var(--reveal-delay, 0ms),
+    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    filter 1.4s ease var(--reveal-delay, 0ms),
     translate 0.3s ease,
     border-color 0.3s ease,
     background-color 0.3s ease,
@@ -160,7 +170,59 @@
   transform: none;
 }
 
+/* ---- Card mockups: slow ambient motion ---- */
+@keyframes mock-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mock-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes mock-shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.mock-float {
+  animation: mock-float 6s ease-in-out infinite;
+}
+
+.mock-drift {
+  animation: mock-drift 8s ease-in-out infinite;
+}
+
+.mock-shimmer {
+  animation: mock-shimmer 3.2s ease-in-out infinite;
+}
+
+.mock-shimmer:nth-child(2n) {
+  animation-delay: 0.8s;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .mock-float,
+  .mock-drift,
+  .mock-shimmer {
+    animation: none;
+  }
   .animate-ticker,
   .animate-fade-up,
   .animate-highlight,

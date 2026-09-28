@@ -1,20 +1,18 @@
-import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
+import { EmailMockup, SmsMockup } from '@/components/card-mockups'
 
 const cases = [
   {
     title: 'AI Cold SMS Engine',
     description:
       'A direct-to-cell conversational system that opens dialogues with decision-makers at scale. Automated qualification sequences book meetings straight into your calendar while reply-handling agents keep every thread warm.',
-    image: '/images/mockup-sms.png',
-    alt: 'AI cold SMS campaign dashboard showing conversation threads and reply rate analytics',
+    Mockup: SmsMockup,
   },
   {
     title: 'Cold Email Infrastructure',
     description:
       'Clean-domain, inbox-ready outreach architecture delivering thousands of hyper-personalized emails daily. Deliverability monitoring, domain rotation, and LLM-driven personalization keep response rates compounding.',
-    image: '/images/mockup-email.png',
-    alt: 'Cold email infrastructure dashboard with deliverability score and domain health table',
+    Mockup: EmailMockup,
   },
 ]
 
@@ -31,18 +29,16 @@ export function CaseStudies() {
       </div>
 
       <div className="flex flex-col gap-8">
-        {cases.map((item) => (
+        {cases.map(({ title, description, Mockup }) => (
           <article
-            key={item.title}
+            key={title}
             className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-secondary p-8 sm:p-12 lg:grid-cols-2"
           >
             <div>
               <h3 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
-                {item.title}
+                {title}
               </h3>
-              <p className="mt-4 leading-relaxed text-card-foreground">
-                {item.description}
-              </p>
+              <p className="mt-4 leading-relaxed text-card-foreground">{description}</p>
               <a
                 href="#contact"
                 className="mt-8 inline-flex items-center gap-2 rounded-full border border-brand/60 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-brand transition-colors hover:bg-brand hover:text-white"
@@ -51,15 +47,7 @@ export function CaseStudies() {
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
-            <div className="relative overflow-hidden rounded-2xl border border-border shadow-[0_0_60px_rgba(44,132,195,0.15)]">
-              <Image
-                src={item.image || '/placeholder.svg'}
-                alt={item.alt}
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
+            <Mockup />
           </article>
         ))}
       </div>
