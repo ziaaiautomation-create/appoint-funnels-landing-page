@@ -9,13 +9,9 @@ function Stage({ children, label }: { children: React.ReactNode; label: string }
     <div
       role="img"
       aria-label={label}
-      className="relative flex h-80 items-start justify-center overflow-hidden rounded-2xl bg-mock-surface px-4 pt-8 sm:h-96"
+      className="relative flex h-72 items-center justify-center overflow-hidden rounded-2xl bg-mock-surface px-4 sm:h-80"
     >
       {children}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-mock-surface to-transparent"
-      />
     </div>
   )
 }
@@ -30,7 +26,7 @@ function Popover({
   points: string[]
 }) {
   return (
-    <div className="mock-float absolute inset-x-0 top-24 mx-auto w-[88%] max-w-sm rounded-xl border border-mock-line bg-mock-panel p-4 shadow-[0_18px_40px_-12px_rgba(28,25,23,0.28)] sm:top-28">
+    <div className="mock-float absolute inset-x-0 top-1/2 z-10 mx-auto w-[86%] max-w-sm -translate-y-1/2 rounded-xl border border-mock-line bg-mock-panel p-4 shadow-[0_18px_40px_-12px_rgba(28,25,23,0.28)]">
       <div className="flex items-center justify-between">
         <span className="flex items-center gap-2 text-sm font-semibold text-mock-ink">
           {icon}
@@ -49,35 +45,23 @@ function Popover({
   )
 }
 
-function ThreadRow({ name, time }: { name: string; time: string }) {
-  return (
-    <div className="flex items-start gap-3">
-      <span className="h-7 w-7 shrink-0 rounded-full bg-mock-muted/60" />
-      <div className="flex flex-1 flex-col gap-1.5">
-        <span className="text-xs font-medium text-mock-ink">
-          {name} <span className="ml-1 text-[10px] font-normal text-mock-muted">{time}</span>
-        </span>
-        <SkeletonLine className="w-4/5" />
-      </div>
-    </div>
-  )
-}
-
 export function EmailMockup() {
   return (
     <Stage label="Unified inbox showing a cold email campaign reply with an AI overview summarising the prospect's response">
-      <div className="mock-drift w-[70%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4">
+      <div className="mock-drift w-[78%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4 opacity-70">
         <div className="flex items-center justify-between">
           <span className="text-xs font-semibold text-mock-ink">
             Re: Cold outreach — Sarah
           </span>
           <Star className="h-3.5 w-3.5 text-mock-muted" aria-hidden="true" />
         </div>
-        <div className="mt-28 flex flex-col gap-5 sm:mt-32">
-          <ThreadRow name="Sarah K. (Cold Lead)" time="10:16 AM" />
-          <span className="text-[10px] text-mock-muted">3 replies · Sequence 2/5</span>
-          <ThreadRow name="Appoint AI" time="10:18 AM" />
+        <div className="mt-4 flex flex-col gap-3">
+          <SkeletonLine className="w-4/5" />
           <SkeletonLine className="w-3/5" />
+        </div>
+        <div className="mt-32 flex flex-col gap-2 sm:mt-36">
+          <SkeletonLine className="w-3/5" />
+          <SkeletonLine className="w-2/5" />
         </div>
       </div>
       <Popover
@@ -95,18 +79,20 @@ export function EmailMockup() {
 export function SmsMockup() {
   return (
     <Stage label="Cold SMS conversation thread with an AI summary showing a qualified lead and booked call">
-      <div className="mock-drift w-[70%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4">
+      <div className="mock-drift w-[78%] max-w-xs rounded-xl border border-mock-line bg-mock-panel p-4 opacity-70">
         <div className="flex items-center justify-between">
           <span className="text-xs font-semibold text-mock-ink">
             Mike R. · Cold SMS Lead
           </span>
           <span className="text-[10px] text-mock-muted">SMS Campaign</span>
         </div>
-        <div className="mt-28 flex flex-col gap-3 sm:mt-32">
+        <div className="mt-4 flex flex-col gap-2.5">
           <span className="mock-shimmer h-6 w-3/5 rounded-2xl rounded-bl-sm bg-mock-line" />
-          <span className="mock-shimmer ml-auto h-6 w-2/3 rounded-2xl rounded-br-sm bg-mock-ink/80" />
+          <span className="mock-shimmer ml-auto h-6 w-2/3 rounded-2xl rounded-br-sm bg-mock-ink/60" />
+        </div>
+        <div className="mt-28 flex flex-col gap-2.5 sm:mt-32">
           <span className="mock-shimmer h-6 w-1/2 rounded-2xl rounded-bl-sm bg-mock-line" />
-          <span className="mock-shimmer ml-auto h-6 w-2/5 rounded-2xl rounded-br-sm bg-mock-ink/80" />
+          <span className="mock-shimmer ml-auto h-6 w-2/5 rounded-2xl rounded-br-sm bg-mock-ink/60" />
         </div>
       </div>
       <Popover
