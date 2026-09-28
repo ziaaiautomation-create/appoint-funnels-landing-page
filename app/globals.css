@@ -202,15 +202,15 @@
 }
 
 .mock-float {
-  animation: mock-float 18s ease-in-out infinite;
+  animation: mock-float 9s ease-in-out infinite;
 }
 
 .mock-drift {
-  animation: mock-drift 24s ease-in-out infinite;
+  animation: mock-drift 12s ease-in-out infinite;
 }
 
 .mock-shimmer {
-  animation: mock-shimmer 9.2s ease-in-out infinite;
+  animation: mock-shimmer 4.6s ease-in-out infinite;
 }
 
 .mock-shimmer:nth-child(2n) {

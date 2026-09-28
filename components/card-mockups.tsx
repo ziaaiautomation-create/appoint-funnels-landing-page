@@ -9,7 +9,7 @@ function Stage({ children, label }: { children: React.ReactNode; label: string }
     <div
       role="img"
       aria-label={label}
-      className="relative flex h-56 items-center justify-center overflow-hidden rounded-2xl bg-mock-surface p-5 sm:h-64"
+      className="relative flex h-72 items-center justify-center overflow-hidden rounded-2xl bg-mock-surface px-4 sm:h-80"
     >
       {children}
     </div>
@@ -26,17 +26,17 @@ function Popover({
   points: string[]
 }) {
   return (
-    <div className="mock-float absolute inset-x-0 top-1/2 z-10 mx-auto w-[78%] max-w-[15rem] -translate-y-1/2 rounded-xl border border-mock-line bg-mock-panel p-3.5 shadow-[0_18px_40px_-12px_rgba(28,25,23,0.28)]">
+    <div className="mock-float absolute inset-x-0 top-1/2 z-10 mx-auto w-[86%] max-w-sm -translate-y-1/2 rounded-xl border border-mock-line bg-mock-panel p-4 shadow-[0_18px_40px_-12px_rgba(28,25,23,0.28)]">
       <div className="flex items-center justify-between">
-        <span className="flex items-center gap-1.5 text-xs font-semibold text-mock-ink">
+        <span className="flex items-center gap-2 text-sm font-semibold text-mock-ink">
           {icon}
           {title}
         </span>
         <ChevronDown className="h-3.5 w-3.5 shrink-0 text-mock-ink" aria-hidden="true" />
       </div>
-      <ul className="mt-2.5 flex flex-col gap-2 pl-3.5">
+      <ul className="mt-3 flex flex-col gap-2.5 pl-4">
         {points.map((point) => (
-          <li key={point} className="list-disc text-[11px] leading-relaxed text-mock-ink/80">
+          <li key={point} className="list-disc text-xs leading-relaxed text-mock-ink/80">
             {point}
           </li>
         ))}
@@ -59,7 +59,7 @@ export function EmailMockup() {
           <SkeletonLine className="w-4/5" />
           <SkeletonLine className="w-3/5" />
         </div>
-        <div className="mt-16 flex flex-col gap-2 sm:mt-20">
+        <div className="mt-28 flex flex-col gap-2 sm:mt-32">
           <SkeletonLine className="w-3/5" />
           <SkeletonLine className="w-2/5" />
         </div>
@@ -90,7 +90,7 @@ export function SmsMockup() {
           <span className="mock-shimmer h-6 w-3/5 rounded-2xl rounded-bl-sm bg-mock-line" />
           <span className="mock-shimmer ml-auto h-6 w-2/3 rounded-2xl rounded-br-sm bg-mock-ink/60" />
         </div>
-        <div className="mt-14 flex flex-col gap-2.5 sm:mt-16">
+        <div className="mt-28 flex flex-col gap-3 sm:mt-32">
           <span className="mock-shimmer h-6 w-1/2 rounded-2xl rounded-bl-sm bg-mock-line" />
           <span className="mock-shimmer ml-auto h-6 w-2/5 rounded-2xl rounded-br-sm bg-mock-ink/60" />
         </div>
