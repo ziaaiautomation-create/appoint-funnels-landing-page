@@ -177,7 +177,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-16px) scale(1.015);
   }
 }
 
@@ -187,7 +187,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(6px);
+    transform: translateY(10px) scale(1.01);
   }
 }
 
@@ -202,15 +202,15 @@
 }
 
 .mock-float {
-  animation: mock-float 9s ease-in-out infinite;
+  animation: mock-float 6s ease-in-out infinite;
 }
 
 .mock-drift {
-  animation: mock-drift 12s ease-in-out infinite;
+  animation: mock-drift 8s ease-in-out infinite;
 }
 
 .mock-shimmer {
-  animation: mock-shimmer 4.6s ease-in-out infinite;
+  animation: mock-shimmer 3.2s ease-in-out infinite;
 }
 
 .mock-shimmer:nth-child(2n) {
