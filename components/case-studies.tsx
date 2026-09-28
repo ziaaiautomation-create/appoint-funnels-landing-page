@@ -9,7 +9,7 @@ const cases = [
     Mockup: SmsMockup,
   },
   {
-    title: 'Cold Email Infrastructure',
+    title: 'AI Cold Email Engine',
     description:
       'Clean-domain, inbox-ready outreach architecture delivering thousands of hyper-personalized emails daily. Deliverability monitoring, domain rotation, and LLM-driven personalization keep response rates compounding.',
     Mockup: EmailMockup,
