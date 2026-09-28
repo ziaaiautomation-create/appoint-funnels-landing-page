@@ -9,7 +9,7 @@ const cases = [
     Mockup: SmsMockup,
   },
   {
-    title: 'Cold Email Infrastructure',
+    title: 'AI Cold Email Engine',
     description:
       'Clean-domain, inbox-ready outreach architecture delivering thousands of hyper-personalized emails daily. Deliverability monitoring, domain rotation, and LLM-driven personalization keep response rates compounding.',
     Mockup: EmailMockup,
@@ -28,11 +28,11 @@ export function CaseStudies() {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 sm:gap-10">
         {cases.map(({ title, description, Mockup }) => (
           <article
             key={title}
-            className="grid items-center gap-8 overflow-hidden rounded-3xl border border-border bg-secondary p-8 sm:p-12 lg:grid-cols-2"
+            className="grid items-center gap-10 overflow-hidden rounded-3xl border border-border bg-secondary p-7 sm:p-12 lg:grid-cols-2"
           >
             <div>
               <h3 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">
