@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Mail, Phone } from 'lucide-react'
 
 const contactLinks = [
@@ -60,9 +61,12 @@ export function Footer() {
           </a>
         </nav>
 
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Appoint Funnels. All rights reserved.
-        </p>
+        <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground sm:items-end">
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
+            Privacy & Service Policy
+          </Link>
+          <p>© {new Date().getFullYear()} Appoint Funnels. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   )
